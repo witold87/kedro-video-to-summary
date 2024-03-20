@@ -1,0 +1,47 @@
+# Here you can define all your data sets by using simple YAML syntax.
+#
+# Documentation for this file format can be found in "The Data Catalog"
+# Link: https://docs.kedro.org/en/stable/data/data_catalog.html
+
+selected_chunks:
+  type: PartitionedDataSet
+  dataset: text.TextDataSet
+  path: data/04_feature/
+  filename_suffix: '.txt'
+
+openai_answers:
+  type: PartitionedDataSet
+  dataset: text.TextDataSet
+  path: data/08_reporting/
+  filename_suffix: '_openai.txt'
+
+redpajama_answers:
+  type: PartitionedDataSet
+  dataset: text.TextDataSet
+  path: data/08_reporting/
+  filename_suffix: '_redpajama.txt'
+
+bart_answers:
+  type: PartitionedDataSet
+  dataset: text.TextDataSet
+  path: data/08_reporting/
+  filename_suffix: '_bart.txt'
+
+mosaic_answers:
+  type: PartitionedDataSet
+  dataset: text.TextDataSet
+  path: data/08_reporting/
+  filename_suffix: '_mosaic.txt'
+
+transcribed_audio:
+  type: PartitionedDataSet
+  dataset: text.TextDataSet
+  path: data/03_primary/
+  filename_suffix: '.txt'
+
+
+#transcribed_audio:
+#  type: PartitionedDataSet
+#  dataset: vid_to_summary_kedro.extras.datasets.video_dataset.VideoDataSet
+#  path: data/02_intermediate/
+#  filename_suffix: ".wav"

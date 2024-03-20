@@ -1,0 +1,17 @@
+[tool.kedro]
+package_name = "vid_to_summary_kedro"
+project_name = "vid-to-summary-kedro"
+kedro_init_version = "0.18.8"
+
+[tool.isort]
+profile = "black"
+
+[tool.pytest.ini_options]
+addopts = """
+--cov-report term-missing \
+--cov src/vid_to_summary_kedro -ra"""
+
+[tool.coverage.report]
+fail_under = 0
+show_missing = true
+exclude_lines = ["pragma: no cover", "raise NotImplementedError"]
